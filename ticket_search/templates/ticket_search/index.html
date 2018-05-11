@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>TicketSearch</h2>
+    <div>
+    <h3> People offering tickets: </h3>
+
+    {% for person in people %}
+    <ol>
+      {% if person.requesting == False %}
+      <li> {{ person }}</li>
+      {% endif %}
+    </ol>
+    {% endfor %}
+  </div>
+    <hr>
+    <div>
+    <h3> People requesting tickets: </h3>
+
+    {% for person in people %}
+    <ol>
+      {% if person.requesting == True %}
+      <li> {{ person }}</li>
+      {% endif %}
+    </ol>
+    {% endfor %}
+  </div>
+  </body>
+</html>
